@@ -1,0 +1,16 @@
+.container-input {
+    position: relative;
+    display: inline-block;
+
+    span {
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-text2);
+    }
+
+    input {
+        padding-left: 20%;
+    }
+}

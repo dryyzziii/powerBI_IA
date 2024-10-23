@@ -1,1 +1,174 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+/* Import des variantes de la police CoFo-Sans */
+@font-face {
+    font-family: 'CoFo-Sans';
+    src: url('assets/fonts/cofo-sans/CoFo-Sans-1.otf') format('opentype');
+    font-weight: 100;  /* Par exemple, si c'est une version light */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CoFo-Sans';
+    src: url('assets/fonts/cofo-sans/CoFo-Sans-2.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CoFo-Sans';
+    src: url('assets/fonts/cofo-sans/CoFo-Sans-3.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CoFo-Sans';
+    src: url('assets/fonts/cofo-sans/CoFo-Sans-4.otf') format('opentype');
+    font-weight: 400;  /* Regular */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CoFo-Sans';
+    src: url('assets/fonts/cofo-sans/CoFo-Sans-5.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CoFo-Sans';
+    src: url('assets/fonts/cofo-sans/CoFo-Sans-6.otf') format('opentype');
+    font-weight: 600;  /* Semi-bold */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CoFo-Sans';
+    src: url('assets/fonts/cofo-sans/CoFo-Sans-7.otf') format('opentype');
+    font-weight: 700;  /* Bold */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CoFo-Sans';
+    src: url('assets/fonts/cofo-sans/CoFo-Sans-8.otf') format('opentype');
+    font-weight: 800;  /* Extra-bold */
+    font-style: normal;
+  }
+  
+
+/* Mode sombre : variables de couleur */
+:root {
+    --color-text1: #CECECE;
+    --color-text2: #9C9C9C;
+    --color-menu: #323234;
+    --color-text3: #877FE8;
+    --color-bg: #161618;
+    --hover-menu: rgba(199, 199, 199, 0.28);
+    --color-normal-dark: #FFFFFF;
+}
+
+
+/* Global styles */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text1);
+  font-family: 'CoFo-Sans', sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text1);
+}
+
+p {
+  color: var(--color-text2);
+}
+
+a {
+  color: var(--color-text3);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-normal-dark);
+  }
+}
+
+/* Menu styling */
+.menu {
+  background-color: var(--color-menu);
+  color: var(--color-text1);
+  padding: 10px;
+
+  a {
+    color: var(--color-text1);
+    padding: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: var(--hover-menu);
+      color: var(--color-normal-dark);
+    }
+  }
+}
+
+/* Bouton styling */
+button {
+  background-color: var(--color-menu);
+  color: var(--color-text1);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color:var(--hover-menu);
+  }
+}
+
+/* Formes */
+.input-text {
+    border-radius: 10px;
+    padding: 8px;
+    border: 1px solid var(--color-text2);
+    background-color: var(--color-menu);
+    color: var(--color-text2);
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-text3);
+      }
+}
+
+/* Sections */
+.section {
+  background-color: var(--color-menu);
+  color: var(--color-text1);
+  padding: 20px;
+  margin-bottom: 20px;
+
+  h2 {
+    color: var(--color-text3);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-menu);
+  color: var(--color-text2);
+  padding: 10px;
+  text-align: center;
+}

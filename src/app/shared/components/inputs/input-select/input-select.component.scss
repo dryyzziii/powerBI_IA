@@ -1,0 +1,111 @@
+.container-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    span {
+        position: absolute;
+        right: 2px;  // Positionne l'icône à droite
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;  // Empêche l'icône d'être cliquable
+        color: var(--color-text2);
+        z-index: 1;
+    }
+    // p {
+    //     position: absolute;
+    //     left: 10;
+    //     top: 0;
+    //     transform: translateY(-50%);
+    //     pointer-events: none;  // Empêche l'icône d'être cliquable
+    //     color: var(--color-text2);
+    //     width: 10px;
+    //     max-width: 10%;
+    //     z-index: 1;
+    // }
+
+    div {
+        width: 100%;  // Espace pour l'icône
+        height: 20px;
+        background-color: transparent;  // Assure que le fond reste transparent
+        border: 1px solid var(--color-text2);
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        color: var(--color-text2);
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: border-radius 0.3s ease;
+        
+    }
+    .selected-div {
+        border: 1px solid var(--color-text3);
+        box-shadow: 0 0 5px rgba(135, 127, 232, 0.8);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    ul.options {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: transparent;  // Fond de la liste déroulante
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;  // Applique le border-radius à la liste
+        max-height: 0;  // Hauteur initiale à 0 pour l'animation
+        overflow: hidden;
+        transition: all 0.2s ease;  // Transition pour l'affichage smooth
+        z-index: 10;
+        visibility: none;
+    }
+
+    ul.options.open {
+        overflow:auto;
+        border: 1px solid var(--color-text2);
+        border-top: 0;
+        max-height: 200px;  // Limite la hauteur lors de l'ouverture
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  // Effet d'ombre pour le dropdown
+    }
+
+    li {
+        padding: 10px;
+        cursor: pointer;
+        color: var(--color-text2);  // Couleur du texte
+        transition: background-color 0.2s ease;
+        max-width: 100%;
+
+        &:hover {
+            background-color: var(--color-text3);  // Couleur sur hover
+            color: var(--color-normal-dark);
+        }
+
+        // &:first-child {
+        //     border-top-left-radius: 8px;
+        //     border-top-right-radius: 8px;
+        // }
+
+        &:last-child {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+
+    .selected {
+        background-color: var(--color-text3);  // Couleur de l'option sélectionnée
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;  /* Largeur de la scrollbar */
+    border-radius: 10px;  /* Arrondi global de la scrollbar */
+    display: none;
+    width: 0;
+    height: 0;
+  }

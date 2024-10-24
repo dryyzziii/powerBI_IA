@@ -1,0 +1,18 @@
+.container-prin {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .empty {
+        flex: 8;
+        height: 100%;
+
+        ng-lottie {
+            object-fit: cover;
+        }
+    }
+    .menuFlex {
+        flex: 2;
+        height: 100%;
+    }
+}

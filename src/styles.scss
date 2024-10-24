@@ -107,44 +107,13 @@ a {
   }
 }
 
-/* Menu styling */
-.menu {
-  background-color: var(--color-menu);
-  color: var(--color-text1);
-  padding: 10px;
-
-  a {
-    color: var(--color-text1);
-    padding: 10px;
-    display: inline-block;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: var(--hover-menu);
-      color: var(--color-normal-dark);
-    }
-  }
-}
-
-/* Bouton styling */
-button {
-  background-color: var(--color-menu);
-  color: var(--color-text1);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-
-  &:hover {
-    background-color:var(--hover-menu);
-  }
-}
 
 /* Formes */
-.input-text {
+.input-text, input[type="text"] {
     border-radius: 10px;
     padding: 8px;
     border: 1px solid var(--color-text2);
-    background-color: var(--color-menu);
+    background-color: transparent;
     color: var(--color-text2);
 
     &:focus {
@@ -153,22 +122,17 @@ button {
       }
 }
 
-/* Sections */
-.section {
-  background-color: var(--color-menu);
-  color: var(--color-text1);
-  padding: 20px;
-  margin-bottom: 20px;
+.input-select, select {
+    border-radius: 10px;
+    padding: 8px;
+    border: 1px solid var(--color-text2);
+    background-color: transparent;
+    color: var(--color-text2);
 
-  h2 {
-    color: var(--color-text3);
-  }
-}
-
-/* Footer */
-footer {
-  background-color: var(--color-menu);
-  color: var(--color-text2);
-  padding: 10px;
-  text-align: center;
+    &:focus {
+        outline: none;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-color: var(--color-text3);
+      }
 }

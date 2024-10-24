@@ -1,0 +1,16 @@
+.container-menu {
+    background-color: var(--color-menu);
+    height: 100%;
+    display: flex;
+    width: 100%;
+
+    .container-app-choices {
+        flex: 5;
+    }
+    .container-project {
+        flex: 1;
+    }
+    .temp {
+        flex: 4;
+    }
+}
